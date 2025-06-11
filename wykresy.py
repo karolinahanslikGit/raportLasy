@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import io
 import base64
 import numpy as np
-
 import re
 
 def create_plot_pozary_polska():
@@ -46,7 +45,6 @@ def create_plot_pozary_polska():
 
     encoded = base64.b64encode(buf.read()).decode('utf-8')
     return encoded
-
 
 def create_plot_pozary_woj():
     df = pd.read_csv('dane/pozary_w_wojewodztwach.csv', sep=';', encoding='utf-8')
