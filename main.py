@@ -42,11 +42,14 @@ def main_dashboard():
 
 @app.route("/zalesienie")
 def zalesienie():
-    return render_template("zalesienie.html")
+    plot_pol, plot_woj = w.create_plot_zalesienie()
+    return render_template("zalesienie.html", plot_pol=plot_pol, plot_woj=plot_woj)
 
 @app.route("/stany-lasow")
 def stany():
-    return render_template("stany.html")
+    plot_pol = w.create_plot_sadzenie_pol()
+    plot_woj = w.create_plot_sadzenie_woj()
+    return render_template("stany.html", plot_pol=plot_pol, plot_woj=plot_woj)
 
 @app.route("/pozary")
 def pozary():

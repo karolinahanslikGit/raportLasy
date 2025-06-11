@@ -2,5 +2,9 @@
 {% block title %}Stan{% endblock %}
 {% block content %}
 <h2>Stan lasów</h2>
-<p>Dane dotyczące stanu lasów w Polsce...</p>
+<p>Dane dotyczące stanu lasów w Polsce.</p>
+<img src="data:image/png;base64,{{ plot_pol }}" alt="Wykres sadzenia drzew w polsce" style="width: 70vw;">
+<img src="data:image/png;base64,{{ plot_woj }}" alt="Wykres sadzenia drzew w polsce z podziałem na województwa" style="width: 70vw;">
+
+
 {% endblock %}
